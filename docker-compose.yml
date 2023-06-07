@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  nbc-interview:
+    image: bank_x_webservice_uat_v1
+    container_name: nbc-interview
+    restart: always
+    ports:
+      - '909:909'
+    environment:
+      - SERVER_PORT=909
+      - JDBCURL=jdbc:mysql://localhost:3306/customers
+      - DATABASE=customers
+      - DB_USERNAME=root
+      - DB_PASSWORD=Th3gr3at
+      # - ACTIVEPROFILE=dev
+
